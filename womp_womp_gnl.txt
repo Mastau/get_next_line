@@ -1,0 +1,25 @@
+GNL:
+
+ - Read:
+	size_t read (int fd, void* buf, size_t cnt);
+	buf : buffer to read data from
+	cnt : buffer size
+return value : Nb byte read SUCCESS / 0 EOF / -1 ERROR or Signal Interrupt
+
+Note - 
+	Buffer need to point 2 a valid mem loc with length not smaller than specific size (overflow)
+	fd need vqlide fd > catch error 
+	cnt > requested nb of bytes to read != return value is the nb of byte read (Possible to read more cause of syscall ????)
+	
+	
+#TODO
+ - ifndef > define buffer_size
+ 
+ read buffer size 
+ 	IF \n dans les read bytes
+ 	> return la ligne et mettre la diffrence dans le buffer
+ 	si pas \n (Buffer trop petit) > on stock et on recommence jusquau prochain
+ 	
+ 
+ ft_utils
+ strdup / strjoin ?
